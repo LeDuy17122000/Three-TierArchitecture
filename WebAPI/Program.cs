@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using DataAccess.Data;
 using DataAccess.Repositories;
 
@@ -11,8 +11,20 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IEmployee, EmployeeRepo>();  
+builder.Services.AddScoped<IEmployee, EmployeeRepo>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazor", policy =>
+    {
+        policy.WithOrigins("https://localhost:7215")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 var app = builder.Build();
+
+
+app.UseCors("AllowBlazor");
 
 // Middleware
 if (app.Environment.IsDevelopment())

@@ -1,7 +1,4 @@
-﻿
-
-namespace Business.DTOs
+﻿namespace Business.DTOs
 {
-    public class ServiceResponse(bool Flag, string Massage);
-   
+    public record ServiceResponse(bool Flag, string Message);
 }

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3D9EF3C2-41AD-43A6-80A3-2EB4DE139ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm", "BlazorWasm\BlazorWasm.csproj", "{A11BF04D-E629-440F-97B1-D06FCB934DC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,12 +35,17 @@ Global
 		{3D9EF3C2-41AD-43A6-80A3-2EB4DE139ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D9EF3C2-41AD-43A6-80A3-2EB4DE139ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D9EF3C2-41AD-43A6-80A3-2EB4DE139ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11BF04D-E629-440F-97B1-D06FCB934DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11BF04D-E629-440F-97B1-D06FCB934DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11BF04D-E629-440F-97B1-D06FCB934DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11BF04D-E629-440F-97B1-D06FCB934DC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{86B428B2-4735-4A65-AB01-EE37B200519D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A11BF04D-E629-440F-97B1-D06FCB934DC1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C02B1FB-B66C-4BB5-A656-736DCF5B574B}
