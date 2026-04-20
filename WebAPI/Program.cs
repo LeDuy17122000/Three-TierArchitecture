@@ -16,9 +16,12 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazor", policy =>
     {
-        policy.WithOrigins("https://localhost:7215")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+                "https://localhost:7215",
+                "http://localhost:5101"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 var app = builder.Build();
@@ -34,6 +37,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowBlazor");
 app.UseAuthorization();
 app.MapControllers();
 

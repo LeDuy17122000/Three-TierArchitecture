@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using DataAccess.Repositories;
+﻿using Business.DTOs;
 using Business.Entities;
+using DataAccess.Repositories;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -38,10 +39,9 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<ServiceResponse> Delete(int id)
         {
-            var result = await employee.DeleteAsync(id);
-            return Ok(result);
+            return await employee.DeleteAsync(id);
         }
     }
 }

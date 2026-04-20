@@ -69,7 +69,7 @@
 
 <Confirmation @ref="confirmation" 
               Instruction="@InStruction" 
-              Action="Handle" 
+              Action="Handle"
               BoostrapClass="border-danger" 
               CustomStyle="width:300px;" /> @* Sửa: 300px *@
 
@@ -110,8 +110,8 @@
     public int DeleteId { get; set; }
     async Task DeleteClicked(int id)
     {
-        DeleteId = id;
-        await confirmation!.Show();
+        var (flag, message) = await emp.DeleteAsync(id);
+        await GetData();
     }
 
     async Task Handle()
